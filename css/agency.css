@@ -430,6 +430,11 @@ section h3.section-subheading {
   margin-top: 12px;
   line-height: 14px;
 }
+
+.bd-image {
+  max-height: 200px;
+  max-width: 200px;
+}
 .timeline > li.timeline-inverted > .timeline-panel {
   float: right;
   text-align: left;
