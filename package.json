@@ -19,5 +19,8 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/BlackrockDigital/startbootstrap-agency.git"
+  },
+  "dependencies": {
+    "firebase": "^2.4.0"
   }
 }
