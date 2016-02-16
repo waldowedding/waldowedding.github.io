@@ -558,7 +558,7 @@ aside.clients img {
 }
 section#contact {
   background-color: #222222;
-  background-image: url('../img/map-image.png');
+  background-image: url('../img/logos/blue_wood.jpg');
   background-position: center;
   background-repeat: no-repeat;
 }
@@ -741,4 +741,56 @@ img::-moz-selection {
 }
 body {
   webkit-tap-highlight-color: #999999;
+}
+
+.message-grouper {
+  background: #505050;
+  margin: 10px 0;
+  opacity: .9;
+  padding: 5px;
+}
+
+.message-stuff {
+  color: white;
+  line-height: 1.75;
+  }
+
+.message-text {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 16px;
+  width: 40%;
+ }
+
+.message-name {
+  text-align: left;
+  padding: 15px;
+  font-weight: bold;
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+}
+
+.message-date {
+  text-align: right;
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  padding-right: 10px;
+  font-size: 12px;
+}
+
+.message-input-stuff{
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+.form-group{
+  position: relative;
+  display: inline-block;
+
+}
+
+.input-name {
+  min-width: 50px;
+}
+.input-text {
+  width: auto;
 }
