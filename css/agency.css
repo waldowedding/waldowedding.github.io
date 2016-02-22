@@ -556,59 +556,56 @@ section h3.section-subheading {
 aside.clients img {
   margin: 50px auto;
 }
-section#contact {
-  background-color: #222222;
-  background-image: url('../img/logos/blue_wood.jpg');
-  background-position: center;
-  background-repeat: no-repeat;
+section#guestBook {
+  background: #222222 url('../img/logos/blue_wood.jpg') no-repeat center;
 }
-section#contact .section-heading {
+section#guestBook .section-heading {
   color: white;
 }
-section#contact .form-group {
+section#guestBook .form-group {
   margin-bottom: 25px;
 }
-section#contact .form-group input,
-section#contact .form-group textarea {
+section#guestBook .form-group input,
+section#guestBook .form-group textarea {
   padding: 20px;
 }
-section#contact .form-group input.form-control {
+section#guestBook .form-group input.form-control {
   height: auto;
 }
-section#contact .form-group textarea.form-control {
+section#guestBook .form-group textarea.form-control {
   height: 236px;
 }
-section#contact .form-control:focus {
+section#guestBook .form-control:focus {
   border-color: #999999;
   box-shadow: none;
 }
-section#contact ::-webkit-input-placeholder {
+section#guestBook ::-webkit-input-placeholder {
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   font-weight: 700;
   color: #bbbbbb;
 }
-section#contact :-moz-placeholder {
+section#guestBook :-moz-placeholder {
   /* Firefox 18- */
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   font-weight: 700;
   color: #bbbbbb;
 }
-section#contact ::-moz-placeholder {
+section#guestBook ::-moz-placeholder {
   /* Firefox 19+ */
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   font-weight: 700;
   color: #bbbbbb;
 }
-section#contact :-ms-input-placeholder {
+section#guestBook :-ms-input-placeholder {
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   font-weight: 700;
   color: #bbbbbb;
 }
-section#contact .text-danger {
+section#guestBook .text-danger {
   color: #e74c3c;
 }
 footer {
@@ -793,4 +790,5 @@ body {
 }
 .input-text {
   width: auto;
+  height: auto;
 }
