@@ -6,17 +6,12 @@ pictures = function(m) {
     console.log(m);
 
     var pics,
-        mainSrc,
         src,
         imgElem,
         mainDiv;
 
-
-    console.log(pics);
     mainDiv = document.createElement('div');
-
     pics = getImgStuff(m);
-    mainSrc = ".pics-div";
 
     for(var i= 0, size=pics.length; i<size; i++) {
         imgElem = document.createElement("img");
@@ -25,7 +20,7 @@ pictures = function(m) {
         mainDiv.appendChild(imgElem);
     }
 
-    $(mainSrc).prepend(mainDiv);
+    $(".pics-div").prepend(mainDiv);
 
 };
 
