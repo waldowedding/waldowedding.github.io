@@ -17,6 +17,7 @@ pictures = function(m) {
         imgElem = document.createElement("img");
         imgElem.setAttribute("src", pics[i].src);
         imgElem.setAttribute("alt", pics[i].words);
+        imgElem.className = "slide-images";
         mainDiv.appendChild(imgElem);
     }
 

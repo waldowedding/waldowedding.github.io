@@ -792,3 +792,12 @@ body {
   width: auto;
   height: auto;
 }
+
+.slide-images {
+  max-width: 100%;
+  height: auto;
+}
+
+.pics-div {
+  display: inline-block;
+}
