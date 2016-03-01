@@ -814,8 +814,8 @@ body {
 
 .slide-images {
   border-radius: 25px;
-  max-width: 7000px;
-  max-height: 700px;
+ /* max-width: 7000px;
+  max-height: 700px;*/
 }
 
 .nvgt{

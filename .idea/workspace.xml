@@ -2,22 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7d6e5c16-ed30-4e7c-ab63-3befed8c1536" name="Default" comment="update images, add bach party">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/portfolio/dreams-preview.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/portfolio/dreams.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/portfolio/escape-preview.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/portfolio/escape.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/portfolio/golden-preview.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/portfolio/golden.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/portfolio/roundicons-free.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/portfolio/roundicons.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/portfolio/startup-framework-preview.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/portfolio/startup-framework.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/portfolio/treehouse-preview.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/portfolio/treehouse.png" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/agency.css" afterPath="$PROJECT_DIR$/css/agency.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/picture-slider.js" afterPath="$PROJECT_DIR$/js/picture-slider.js" />
     </list>
     <ignored path="waldowedding.github.io.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -61,11 +46,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="picture-slider.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="picture-slider.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/picture-slider.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.13043478">
-              <caret line="42" column="43" selection-start-line="42" selection-start-column="43" selection-end-line="42" selection-end-column="43" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="69" column="0" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -101,11 +86,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="agency.css" pinned="false" current-in-tab="false">
+      <file leaf-file-name="agency.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/css/agency.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.830189">
-              <caret line="851" column="13" selection-start-line="851" selection-start-column="13" selection-end-line="851" selection-end-column="13" />
+            <state vertical-scroll-proportion="0.34705076">
+              <caret line="817" column="22" selection-start-line="816" selection-start-column="1" selection-end-line="817" selection-end-column="22" />
               <folding />
             </state>
           </provider>
@@ -140,8 +125,8 @@
         <option value="$PROJECT_DIR$/picSlider/js/jquery.slidescale.js" />
         <option value="$PROJECT_DIR$/css/bootstrap.min.css" />
         <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/css/agency.css" />
         <option value="$PROJECT_DIR$/js/picture-slider.js" />
+        <option value="$PROJECT_DIR$/css/agency.css" />
       </list>
     </option>
   </component>
@@ -715,18 +700,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/agency.css">
+    <entry file="file://$PROJECT_DIR$/js/picture-slider.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.830189">
-          <caret line="851" column="13" selection-start-line="851" selection-start-column="13" selection-end-line="851" selection-end-column="13" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="69" column="0" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/picture-slider.js">
+    <entry file="file://$PROJECT_DIR$/css/agency.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.13043478">
-          <caret line="42" column="43" selection-start-line="42" selection-start-column="43" selection-end-line="42" selection-end-column="43" />
+        <state vertical-scroll-proportion="0.34705076">
+          <caret line="817" column="22" selection-start-line="816" selection-start-column="1" selection-end-line="817" selection-end-column="22" />
           <folding />
         </state>
       </provider>
