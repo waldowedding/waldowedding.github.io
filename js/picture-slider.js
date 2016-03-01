@@ -1,32 +1,81 @@
 /**
  * Created by Dillon Kehrwald on 2/21/2016.
  */
-pictures = function(m) {
-    console.log(this);
-    console.log(m);
 
+pictures = function(m) {
     var pics,
         src,
         imgElem,
         mainDiv;
+    var index = 0;
 
     mainDiv = document.createElement('div');
+    mainDiv.className = "inner-pic-div";
     pics = getImgStuff(m);
 
-    for(var i= 0, size=pics.length; i<size; i++) {
-        imgElem = document.createElement("img");
-        imgElem.setAttribute("src", pics[i].src);
-        imgElem.setAttribute("alt", pics[i].words);
-        imgElem.className = "slide-images";
-        mainDiv.appendChild(imgElem);
+    imgElem = document.createElement("img");
+    imgElem.setAttribute("src", pics[index].src);
+    imgElem.setAttribute("alt", pics[index].words);
+    imgElem.className = "slide-images img-responsive";
+    $(imgElem).on('click', function() {
+        index = indexDecrease(index, pics);
+        $(imgElem).attr('src', pics[index].src);
+    });
+
+    var prev = document.createElement("span");
+    prev.setAttribute("id", "prev");
+    prev.setAttribute("class", "nvgt fa fa-arrow-circle-o-left fa-3x");
+    $(prev).on('click', function() {
+        index = indexDecrease(index, pics);
+        $(imgElem).attr('src', pics[index].src);
+    });
+
+    var next = document.createElement("span");
+    next.setAttribute("id", "next");
+    next.setAttribute("class", "nvgt fa fa-arrow-circle-o-right fa-3x");
+    $(next).on('click', function() {
+        index = indexIncrease(index, pics);
+        $(imgElem).attr('src', pics[index].src);
+    });
+
+    var counter = document.createElement("SPAN");
+    counter.setAttribute("class", "pic-counter");
+    counter.innerHTML = "1/" + pics.length;
+
+    mainDiv.appendChild(imgElem);
+    mainDiv.appendChild(prev);
+    mainDiv.appendChild(next);
+    mainDiv.appendChild(counter);
+    $(".outer-pic-div").prepend(mainDiv);
+};
+
+indexIncrease = function(index, pics) {
+  if(index < pics.length-1) {
+      index++;
+  } else if(index === pics.length-1) {
+      index = 0;
+  }
+    var displayedIndex = index + 1;
+    var text = displayedIndex + "/" + pics.length;
+    $(".pic-counter").text(text);
+    return index;
+};
+
+indexDecrease = function(index, pics) {
+    if(index > 0) {
+        index--;
+    } else if(index === 0) {
+        index = pics.length-1;
     }
 
-    $(".pics-div").prepend(mainDiv);
-
+    var displayedIndex = index + 1;
+    var text = displayedIndex + "/" + pics.length;
+    $(".pic-counter").text(text);
+    return index;
 };
 
 picturesClose = function() {
-    $(".pics-div").empty();
+    $(".outer-pic-div").empty();
 };
 
 getImgStuff = function(m) {
@@ -317,26 +366,4 @@ getImgStuff = function(m) {
             break;
     }
     return pics;
-};
-
-getSrc = function(m) {
-    var mainSrc;
-    switch(m) {
-        case "engage":
-            mainSrc = ".engage-pics";
-            break;
-        case "college":
-            mainSrc = ".college-pics";
-            break;
-        case "recent":
-            mainSrc = ".recent-pics";
-            break;
-        case "vacations":
-            mainSrc = ".vacations-pics";
-            break;
-        case "hs":
-            mainSrc = ".hs-pics";
-            break;
-    }
-    return mainSrc;
 };
