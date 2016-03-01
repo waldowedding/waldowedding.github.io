@@ -796,7 +796,7 @@ body {
 .outer-pic-div{
 /*  width: 300px;
   height: 500px;*/
-  padding:20px;
+  padding:10px;
   border:2px solid navy;
   border-radius: 25px;
   -webkit-box-sizing:border-box;
@@ -814,8 +814,6 @@ body {
 
 .slide-images {
   border-radius: 25px;
- /* max-width: 7000px;
-  max-height: 700px;*/
 }
 
 .nvgt{
