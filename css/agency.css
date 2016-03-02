@@ -859,7 +859,7 @@ body {
   bottom: 30px;
   opacity: .8;
   background: rgba(0, 0, 0, 0.5);
-  left: 80px;
+  left: 50px;
 }
 
 ul.pagination {
@@ -894,3 +894,6 @@ ul.pagination li img:hover:not(.active) {
   border: 2px solid navy;
 }
 
+.mini-pic-container {
+  max-width: 600px;
+}
