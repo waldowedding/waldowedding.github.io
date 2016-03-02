@@ -850,3 +850,47 @@ body {
   right: 10px;
 }
 
+.pic-words {
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  color: silver;
+  position: absolute;
+  bottom: 30px;
+  opacity: .8;
+  background: rgba(0, 0, 0, 0.5);
+  left: 80px;
+}
+
+ul.pagination {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+}
+
+ul.pagination li {
+  display: inline;
+}
+
+ul.pagination li img {
+  color: black;
+  float: left;
+  padding: 2px;
+  text-decoration: none;
+  transition: background-color .3s;
+  border: 1px solid #ddd;
+  margin: 0 4px;
+}
+
+ul.pagination li img.active {
+  background-color: silver;
+  color: silver;
+  border: 2px solid navy;
+
+}
+
+ul.pagination li img:hover:not(.active) {
+  background-color: navy;
+  border: 2px solid navy;
+}
+

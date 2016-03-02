@@ -13,13 +13,17 @@ pictures = function(m) {
     mainDiv.className = "inner-pic-div";
     pics = getImgStuff(m);
 
+    var words = document.createElement('span');
+    words.className = "pic-words";
+    words.innerHTML = pics[index].words;
+
     imgElem = document.createElement("img");
     imgElem.setAttribute("src", pics[index].src);
-    imgElem.setAttribute("alt", pics[index].words);
     imgElem.className = "slide-images img-responsive";
     $(imgElem).on('click', function() {
-        index = indexDecrease(index, pics);
+        index = indexIncrease(index, pics);
         $(imgElem).attr('src', pics[index].src);
+        $(words).text(pics[index].words);
     });
 
     var prev = document.createElement("span");
@@ -28,6 +32,7 @@ pictures = function(m) {
     $(prev).on('click', function() {
         index = indexDecrease(index, pics);
         $(imgElem).attr('src', pics[index].src);
+        $(words).text(pics[index].words);
     });
 
     var next = document.createElement("span");
@@ -36,17 +41,45 @@ pictures = function(m) {
     $(next).on('click', function() {
         index = indexIncrease(index, pics);
         $(imgElem).attr('src', pics[index].src);
+        $(words).text(pics[index].words);
     });
 
     var counter = document.createElement("SPAN");
     counter.setAttribute("class", "pic-counter");
     counter.innerHTML = "1/" + pics.length;
 
+    var miniContainer = document.createElement("div");
+    miniContainer.className = "mini-pic-container img-responsive";
+    var miniContainerList = document.createElement("ul");
+    miniContainerList.className = "pagination";
+    for(var p=0; p < pics.length; p++) {
+        var listElem = document.createElement("li");
+        var linkElem = document.createElement("img");
+        linkElem.style.height = "50px";
+        linkElem.style.width = "auto";
+        $(linkElem).on('click',{newIndex: p}, function(event) {
+            var myIndex = event.data.newIndex;
+            $(imgElem).attr('src', pics[myIndex].src);
+            $(words).text(pics[myIndex].words);
+            var displayedIndex = myIndex + 1;
+            var text = displayedIndex + "/" + pics.length;
+            $(".pic-counter").text(text);
+            index = myIndex;
+        });
+        $(linkElem).attr('src', pics[p].src);
+        listElem.appendChild(linkElem);
+        miniContainerList.appendChild(listElem);
+    }
+
+    miniContainer.appendChild(miniContainerList);
+
     mainDiv.appendChild(imgElem);
     mainDiv.appendChild(prev);
     mainDiv.appendChild(next);
     mainDiv.appendChild(counter);
-    $(".outer-pic-div").prepend(mainDiv);
+    mainDiv.appendChild(words);
+    //mainDiv.appendChild(miniContainer);
+    $(".outer-pic-div").prepend(miniContainer).prepend(mainDiv);
 };
 
 indexIncrease = function(index, pics) {
