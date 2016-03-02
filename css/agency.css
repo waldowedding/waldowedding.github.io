@@ -276,7 +276,7 @@ header .intro-text .intro-heading {
   }
 }
 section {
-  padding: 100px 0;
+  padding: 75px 0;
 }
 section h2.section-heading {
   font-size: 40px;
@@ -293,7 +293,7 @@ section h3.section-subheading {
 }
 @media (min-width: 768px) {
   section {
-    padding: 150px 0;
+    padding: 75px 0;
   }
 }
 .service-heading {
@@ -557,7 +557,8 @@ aside.clients img {
   margin: 50px auto;
 }
 section#guestBook {
-  background: #222222 url('../img/logos/blue_wood.jpg') no-repeat center;
+  background: url('../img/logos/blue_wood.jpg') no-repeat fixed;
+
 }
 section#guestBook .section-heading {
   color: white;
@@ -778,19 +779,31 @@ body {
   display: inline-block;
   width: 100%;
 }
+.datText {
+  background: rgba(0, 0, 0, 0.6);
+  position: relative;
+  display: inline;
+  top: -10px;
+  padding: 5px;
+  border-radius: 5px;
+}
 
 .form-group{
   position: relative;
   display: inline-block;
+}
 
+.msg-group{
+  width: 50%;
 }
 
 .input-name {
   min-width: 50px;
 }
 .input-text {
-  width: auto;
+  width: 100%;
   height: auto;
+  min-width: 218px;
 }
 
 .outer-pic-div{
@@ -895,5 +908,5 @@ ul.pagination li img:hover:not(.active) {
 }
 
 .mini-pic-container {
-  max-width: 600px;
+  max-width: 550px;
 }

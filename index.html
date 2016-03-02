@@ -373,21 +373,21 @@
                 </div>
                 <div class="col-md-2">
                     <div class="team-member">
+                        <img src="img/team/chris.jpg" class="img-responsive img-circle" alt="">
+                        <h4>Chris Storm</h4>
+                        <h5>Groomsman</h5>
+                        <p class="text-muted">Chris and Dillon met in high school and the friendship continued into college.
+                            They were roommates for their junior and senior years of college in Lawrence, KS.  They enjoy fishing fishing and playing racquetball together.</p>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="team-member">
                         <img src="img/team/will.jpg" class="img-responsive img-circle" alt="">
                         <h4>Will Mears</h4>
                         <h5>Groomsman</h5>
                         <p class="text-muted">Will and Dillon met freshman year of high school playing football and have been
                             best friends ever since.  Dillon was the best man in Will's wedding 3 years ago.
                             They share many similar interests including skiing, hunting, and fishing.</p>
-                    </div>
-                </div>
-                <div class="col-md-2">
-                    <div class="team-member">
-                        <img src="img/team/chris.jpg" class="img-responsive img-circle" alt="">
-                        <h4>Chris Storm</h4>
-                        <h5>Groomsman</h5>
-                        <p class="text-muted">Chris and Dillon met in high school and the friendship continued into college.
-                            They were roommates for their junior and senior years of college in Lawrence, KS.  They enjoy fishing fishing and playing racquetball together.</p>
                     </div>
                 </div>
                 <div class="col-md-2">
@@ -425,22 +425,22 @@
                 </div>
                 <div class="col-md-2">
                     <div class="team-member">
-                        <img src="img/team/danielle.jpg" class="img-responsive img-circle" alt="">
-                        <h4>Danielle Mears</h4>
-                        <h5>Bridesmaid</h5>
-                        <p class="text-muted">Danielle and Marissa met in high school and have been besties ever since! Marissa was Danielle's Maid of Honor
-                            in her wedding November 2013 and Danielle is so excited to stand up with Marissa at her wedding! Marissa and Danielle love touring
-                            different wineries, drinking wine, and going on girls trips together!</p>
-                    </div>
-                </div>
-                <div class="col-md-2">
-                    <div class="team-member">
                         <img src="img/team/lauren.jpg" class="img-responsive img-circle" alt="">
                         <h4>Lauren Keith</h4>
                         <h5>Bridesmaid</h5>
                         <p class="text-muted">Lauren and Marissa have been friends for 15 years! They started off as friends in 5th grade when Lauren moved to Kansas,
                             they cheered together in high school, studied nursing together in college, and Marissa was a bridesmaid in Lauren's wedding in April 2015.
                             They love quoting "The Office" and drinking wine together!</p>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="team-member">
+                        <img src="img/team/danielle.jpg" class="img-responsive img-circle" alt="">
+                        <h4>Danielle Mears</h4>
+                        <h5>Bridesmaid</h5>
+                        <p class="text-muted">Danielle and Marissa met in high school and have been besties ever since! Marissa was Danielle's Maid of Honor
+                            in her wedding November 2013 and Danielle is so excited to stand up with Marissa at her wedding! Marissa and Danielle love touring
+                            different wineries, drinking wine, and going on girls trips together!</p>
                     </div>
                 </div>
                 <div class="col-md-2">
@@ -460,12 +460,13 @@
     <!-- Guest Book Section -->
     <section id="guestBook">
         <div class="container">
+            <div class="text-muted datText">Type a message and Press ENTER to submit!</div>
             <div class="message-input-stuff">
                 <div class="form-group">
                     <input type='text' class="form-control input-name" id='nameInput' placeholder='Your Name *' required data-validation-required-message="Please enter your name.">
                     <p class="help-block text-danger"></p>
                 </div>
-                <div class="form-group">
+                <div class="form-group msg-group">
                     <input type='text' class="form-control input-text" id='messageInput' placeholder='Your Message *' required data-validation-required-message="Please enter a message.">
                     <p class="help-block text-danger"></p>
                 </div>
@@ -480,7 +481,9 @@
                         var text = $('#messageInput').val();
                         var dt_tm = new Date();
                         dt_tm = dt_tm.toLocaleString();
-                        myDataRef.push({name: name, text: text, dt_tm: dt_tm});
+                        if(name && text) {
+                            myDataRef.push({name: name, text: text, dt_tm: dt_tm});
+                        }
                         $('#messageInput').val('');
                     }
                 });
