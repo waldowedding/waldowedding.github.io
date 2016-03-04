@@ -612,12 +612,14 @@ section#guestBook .text-danger {
 footer {
   padding: 25px 0;
   text-align: center;
+  background-color: #606060;
 }
 footer span.copyright {
   line-height: 40px;
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   text-transform: none;
+  color: silver;
 }
 footer ul.quicklinks {
   margin-bottom: 0;
