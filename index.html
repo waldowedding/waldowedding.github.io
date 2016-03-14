@@ -90,6 +90,15 @@
                 <div class="intro-lead-in">Dillon and Marissa</div>
                 <div class="intro-heading">29 October 2016</div>
                 <a href="#rsvp" class="btn btn-xl" data-toggle="modal">RSVP</a>
+                <div id="countdown" class="intro-heading"></div>
+                <script>
+                    var date1 = new Date();
+                    var date2 = new Date(2016, 9, 29);
+                    var timeDiff = Math.abs(date2.getTime() - date1.getTime());
+                    var countdownDate = Math.ceil(timeDiff / (1000 * 3600 * 24));
+                    countdownDate += " days remaining!";
+                    document.getElementById("countdown").innerHTML = countdownDate;
+                </script>
             </div>
         </div>
     </header>
