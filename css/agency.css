@@ -556,9 +556,29 @@ section h3.section-subheading {
 aside.clients img {
   margin: 50px auto;
 }
+section#big_day {
+  background: url('../img/barrl-background.jpg') no-repeat fixed;
+  background-size: 100% 100%;
+}
+.bd-header {
+  font-weight: bold;
+  color: #E5E4E2;
+}
+.bd-sub {
+  font-weight: bold;
+  color: #BCC6CC;
+}
+.bd-sub-a {
+  font-weight: bold;
+  color: #4863A0;
+}
+.day-background {
+  background: #2C3539;
+  opacity: 0.75;
+  border-radius: 30px;
+}
 section#guestBook {
   background: url('../img/logos/blue_wood.jpg') no-repeat fixed;
-
 }
 section#guestBook .section-heading {
   color: white;
