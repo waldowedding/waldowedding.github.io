@@ -578,7 +578,7 @@ section#big_day {
   opacity: 0.75;
   border-radius: 25px;
 }
-section#Story {
+/*section#Story {
   background: url('../img/paisley.jpg') no-repeat fixed;
 }
 .story-background {
@@ -588,7 +588,7 @@ section#Story {
 }
 .story-h {
   color: mintcream;
-}
+}*/
 
 section#guestBook {
   background: url('../img/logos/blue_wood.jpg') no-repeat fixed;
