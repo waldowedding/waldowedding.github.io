@@ -376,7 +376,7 @@ section h3.section-subheading {
   position: absolute;
   content: "";
   width: 2px;
-  background-color: #f1f1f1;
+  background-color: silver;
   left: 40px;
   margin-left: -1.5px;
 }
@@ -422,7 +422,7 @@ section h3.section-subheading {
   background-color: #999999;
   color: white;
   border-radius: 100%;
-  border: 7px solid #f1f1f1;
+  border: 7px solid silver;
   text-align: center;
   opacity: 1;
 }
@@ -558,8 +558,7 @@ aside.clients img {
   margin: 50px auto;
 }
 section#big_day {
-  background: url('../img/barrl-background.jpg') no-repeat fixed;
-  background-size: 100% 100%;
+  background: url('../img/barrl-background.jpg') repeat fixed;
 }
 .bd-header {
   font-weight: bold;
@@ -578,17 +577,9 @@ section#big_day {
   opacity: 0.75;
   border-radius: 25px;
 }
-/*section#Story {
-  background: url('../img/paisley.jpg') no-repeat fixed;
+section#Story {
+  background: url('../img/paisley-light2.png') no-repeat fixed;
 }
-.story-background {
-  background: mintcream;
-  opacity: 0.8;
-  border-radius: 25px;
-}
-.story-h {
-  color: mintcream;
-}*/
 
 section#guestBook {
   background: url('../img/logos/blue_wood.jpg') no-repeat fixed;
@@ -756,7 +747,12 @@ ul.social-buttons li a:active {
 }
 .portfolio-modal .modal-backdrop {
   opacity: 0;
-  display: none;
+  display: none;.modal
+}
+
+.modal {
+  background: url('../img/trans1.png') no-repeat fixed;
+  background-size: 100% 100%;
 }
 ::-moz-selection {
   text-shadow: none;
