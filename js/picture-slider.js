@@ -114,8 +114,8 @@ picturesClose = function() {
 getImgStuff = function(m) {
     var pics;
     switch(m) {
-        case "engage":
-            pics =  [
+        case "chicago":
+            pics = [
                 {
                     src: 'img/us/engage/bean.jpg',
                     words: 'the bean!'
@@ -126,7 +126,11 @@ getImgStuff = function(m) {
                 {
                     src: 'img/us/engage/ring.jpg',
                     words: 'Aftershock'
-                },
+                }
+            ];
+            break;
+        case "engage":
+            pics =  [
                 {
                     src: 'img/us/engage/1.jpg',
                     words: 'Rachell Stierly Photography'
@@ -303,7 +307,6 @@ getImgStuff = function(m) {
                     src: 'img/us/engage/44.jpg',
                     words: 'Rachell Stierly Photography'
                 }
-
             ];
             break;
         case "college":
