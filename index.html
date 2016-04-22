@@ -91,18 +91,9 @@
     <header>
         <div class="container">
             <div class="intro-text">
-                <div class="intro-lead-in">Dillon and Marissa</div>
-                <div class="intro-heading">29 October 2016</div>
-                <a href="#rsvp" class="btn btn-xl" data-toggle="modal">RSVP</a>
-                <div id="countdown" class="intro-heading"></div>
-                <script>
-                    var date1 = new Date();
-                    var date2 = new Date(2016, 9, 29);
-                    var timeDiff = Math.abs(date2.getTime() - date1.getTime());
-                    var countdownDate = Math.ceil(timeDiff / (1000 * 3600 * 24));
-                    countdownDate += " days remaining!";
-                    document.getElementById("countdown").innerHTML = countdownDate;
-                </script>
+                <!--<div class="intro-lead-in">Dillon and Marissa</div>
+               <a href="#rsvp" class="btn btn-xl" data-toggle="modal">RSVP</a> -->
+
             </div>
         </div>
     </header>
@@ -113,7 +104,15 @@
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading bd-header">The Big Day</h2>
-                    <h3 class="section-subheading text-muted bd-sub">We can't wait to celebrate with you all!</h3>
+                    <h3 id="countdown" class="section-subheading text-muted bd-sub"></h3>
+                    <script>
+                        var date1 = new Date();
+                        var date2 = new Date(2016, 9, 28);
+                        var timeDiff = Math.abs(date2.getTime() - date1.getTime());
+                        var countdownDate = Math.ceil(timeDiff / (1000 * 3600 * 24));
+                        countdownDate += " days remaining!";
+                        document.getElementById("countdown").innerHTML = countdownDate;
+                    </script>
                 </div>
             </div>
             <div class="row text-center">
@@ -170,7 +169,7 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-3 col-sm-6 portfolio-item">
+                <div class="col-md-2 col-sm-6 portfolio-item">
                     <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal" onclick="pictures('chicago')">
                         <div class="portfolio-hover">
                             <div class="portfolio-hover-content">
@@ -184,7 +183,7 @@
                         <P class="text-muted">Dillon Proposing in Chicago!</P>
                     </div>
                 </div>
-                <div class="col-md-3 col-sm-6 portfolio-item">
+                <div class="col-md-2 col-sm-6 portfolio-item">
                     <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal" onclick="pictures('engage')">
                         <div class="portfolio-hover">
                             <div class="portfolio-hover-content">
@@ -198,7 +197,7 @@
                         <P class="text-muted">Our engagement pictures from Rachell Stierly Photography!</P>
                     </div>
                 </div>
-                <div class="col-md-3 col-sm-6 portfolio-item">
+                <div class="col-md-2 col-sm-6 portfolio-item">
                     <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal" onclick="pictures('vacations')">
                         <div class="portfolio-hover">
                             <div class="portfolio-hover-content">
@@ -212,7 +211,7 @@
                         <P class="text-muted">We have gone many places over the years</P>
                     </div>
                 </div>
-                <div class="col-md-3 col-sm-6 portfolio-item">
+                <div class="col-md-2 col-sm-6 portfolio-item">
                     <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal" onclick="pictures('recent')">
                         <div class="portfolio-hover">
                             <div class="portfolio-hover-content">
@@ -226,7 +225,7 @@
                         <P class="text-muted">We like to have fun</P>
                     </div>
                 </div>
-                <div class="col-md-3 col-sm-6 portfolio-item">
+                <div class="col-md-2 col-sm-6 portfolio-item">
                     <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal" onclick="pictures('college')">
                         <div class="portfolio-hover">
                             <div class="portfolio-hover-content">
@@ -240,7 +239,7 @@
                         <P class="text-muted">We enjoyed our years in college</P>
                     </div>
                 </div>
-                <div class="col-md-3 col-sm-6 portfolio-item">
+                <div class="col-md-2 col-sm-6 portfolio-item">
                     <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal" onclick="pictures('hs')">
                         <div class="portfolio-hover">
                             <div class="portfolio-hover-content">

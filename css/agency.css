@@ -224,10 +224,7 @@ fieldset[disabled] .btn-xl.active {
   }
 }
 header {
-  background-image: url('../img/proposal.jpg');
-  background-repeat: none;
-  background-attachment: scroll;
-  background-position: center center;
+  background-image: url('../img/cover.jpg');
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
@@ -235,6 +232,7 @@ header {
   text-align: center;
   color: white;
 }
+
 header .intro-text {
   padding-top: 100px;
   padding-bottom: 50px;
@@ -274,6 +272,9 @@ header .intro-text .intro-heading {
     line-height: 75px;
     margin-bottom: 50px;
   }
+}
+#countdown {
+  bottom: 0;
 }
 section {
   padding: 75px 0;
@@ -586,6 +587,12 @@ section#Story {
 section#guestBook {
   background: url('../img/logos/blue_wood.jpg') no-repeat fixed;
 }
+
+section#pictures {
+  background: url('../img/pic-bg.jpg') no-repeat fixed;
+  background-size: cover;
+}
+
 section#guestBook .section-heading {
   color: white;
 }
