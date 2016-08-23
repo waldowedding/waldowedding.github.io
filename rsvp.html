@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Waldo Wedding RSVP">
+    <title>RSVP Waldo Wedding</title>
+    <meta name="author" content="Dillon Kehrwald">
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="css/rsvp.css" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+</head>
+<body id="page-top" class="index">
+<div class="container">
+    <div class="rsvpText">RSVP RIGHT HERE!</div>
+    <div class="message-input-stuff">
+        <div class="form-group">
+            <input type='text' class="form-control input-name" id='lastNameInput' placeholder='Your Last Name' required
+                   data-validation-required-message="Please enter your last name.">
+            <p class="help-block text-danger"></p>
+        </div>
+        <div class="form-group msg-group">
+            <input type='number' class="form-control input-text" id='numGuests' placeholder='Number of guests attending'
+                   required data-validation-required-message="Please enter the number of guests attending with you.">
+            <p class="help-block text-danger"></p>
+        </div>
+        <div class="form-group msg-group">
+            <button class="nextButton" type="button">NEXT</button>
+        </div>
+    </div>
+    <div id='firstNameWrapper' class="firstNameWrapper" width='100px'></div>
+
+
+    <script src="https://www.gstatic.com/firebasejs/3.3.0/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyBQm2z--hToBbw3HQ82h9g3_kwv7YpVnA8",
+            authDomain: "waldowedguests-4f4bf.firebaseapp.com",
+            databaseURL: "https://waldowedguests-4f4bf.firebaseio.com",
+            storageBucket: "waldowedguests-4f4bf.appspot.com"
+        };
+        firebase.initializeApp(config);
+    </script>
+
+
+    <script>
+        $(".nextButton").click(function (e) {
+            $(this).prop("disabled", true);
+            var numInvited = Number($("#numGuests").val()) || 0;
+            var lastName = $("#lastNameInput").val() || "undefined";
+            for (var i = 0; i < numInvited; i++) {
+                var firstNameDiv = document.createElement("div");
+                firstNameDiv.className = "firstNameDiv";
+                var className = "firstName" + i;
+                var firstNameForm = document.createElement("input");
+                firstNameForm.setAttribute("type", "text");
+                firstNameForm.setAttribute("id", "firstNames");
+                var next = i + 1;
+                var placeholder = "Guest " + next;
+                firstNameForm.setAttribute("placeholder", placeholder);
+                firstNameForm.className = className + " " + "form-control";
+                firstNameDiv.appendChild(firstNameForm);
+                $(firstNameDiv).appendTo($("#firstNameWrapper"));
+            }
+
+            var submit = document.createElement("button");
+            submit.setAttribute("type", "button");
+            submit.innerHTML = "SUBMIT";
+            submit.className = "submitButton";
+            $(submit).appendTo($("#firstNameWrapper"));
+
+            $(".submitButton").click(function (e) {
+                var guests = {};
+                var lastName = $("#lastNameInput").val();
+                guests.lastName = lastName;
+                var number = numInvited;
+                guests.number = number;
+
+                for (var i = 0; i < numInvited; i++) {
+                    var className = "firstName" + i.toString();
+                    var firstName = $('.firstName' + i.toString()).val();
+                    guests[className] = firstName;
+                }
+                firebase.database().ref().push(guests);
+
+                window.alert("RSVP Submitted! Can't wait to see you October 29th!");
+                window.location = "index.html";
+            });
+
+            var clear = document.createElement("button");
+            clear.setAttribute("type", "button");
+            clear.innerHTML = "CLEAR";
+            clear.className = "clearButton";
+            $(clear).appendTo($("#firstNameWrapper"));
+
+            $(".clearButton").click(function (e) {
+                $(".nextButton").prop("disabled", false);
+                $("#firstNameWrapper").empty();
+            });
+        });
+    </script>
+</div>
+
+</body>
+</html>
+
+

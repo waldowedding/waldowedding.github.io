@@ -255,7 +255,7 @@ header .intro-text .intro-heading {
 }
 @media (min-width: 768px) {
   header .intro-text {
-    padding-top: 300px;
+    padding-top: 400px;
     padding-bottom: 200px;
   }
   header .intro-text .intro-lead-in {
@@ -948,4 +948,26 @@ ul.pagination li img:hover:not(.active) {
 
 .mini-pic-container {
   max-width: 550px;
+}
+
+.rsvpButton {
+    background: rgb(248, 12, 58);
+    color: #999999;
+    border-color: #999999;
+    font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-transform: uppercase;
+    font-weight: 700;
+    border-radius: 15px;
+    font-size: 18px;
+    padding: 20px 40px;
+    opacity: .8;
+    float: left;
+}
+
+.rsvpButton:hover,
+.rsvpButton:active,
+.rsvpButton:focus,
+.rsvpButton.active {
+    border: 2px solid navy;
+    border-radius: 15px;
 }
