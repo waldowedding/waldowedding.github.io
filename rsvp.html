@@ -88,10 +88,16 @@
                     var firstName = $('.firstName' + i.toString()).val();
                     guests[className] = firstName;
                 }
-                firebase.database().ref().push(guests);
 
-                window.alert("RSVP Submitted! Can't wait to see you October 29th!");
-                window.location = "index.html";
+                if (confirm("RSVP Submitted!\n Can't wait to see you October 29th!") == true) {
+                    firebase.database().ref().push(guests);
+                    afterSubmit(numInvited);
+                }
+                else {
+                    window.alert("Cleared Form\n did not submit!");
+                    $(".nextButton").prop("disabled", false);
+                    $("#firstNameWrapper").empty();
+                }
             });
 
             var clear = document.createElement("button");
@@ -105,6 +111,25 @@
                 $("#firstNameWrapper").empty();
             });
         });
+
+        function afterSubmit(numInvited) {
+            $('#lastNameInput').prop('disabled', true);
+            $('#numGuests').prop('disabled', true);
+            $('.clearButton').prop('disabled', true);
+            $('.submitButton').prop('disabled', true);
+            for(var i = 0; i < numInvited; i++) {
+                $(".firstName"+i).prop('disabled', true);
+            }
+            var returnButton = document.createElement("button");
+            returnButton.setAttribute("type", "button");
+            returnButton.innerHTML = "Return Home!";
+            returnButton.className = "returnButton";
+            $(returnButton).appendTo($("#firstNameWrapper"));
+
+            $(".returnButton").click(function (e) {
+                window.location = "index.html";
+            });
+        }
     </script>
 </div>
 
