@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7d6e5c16-ed30-4e7c-ab63-3befed8c1536" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/rsvp.css" afterPath="$PROJECT_DIR$/css/rsvp.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rsvp.html" afterPath="$PROJECT_DIR$/rsvp.html" />
     </list>
     <ignored path="waldowedding.github.io.iws" />
@@ -40,18 +40,8 @@
       <file leaf-file-name="rsvp.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/rsvp.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="428">
-              <caret line="115" column="55" selection-start-line="115" selection-start-column="55" selection-end-line="115" selection-end-column="55" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="rsvp.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/css/rsvp.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="22" column="9" selection-start-line="22" selection-start-column="9" selection-end-line="22" selection-end-column="9" />
+            <state relative-caret-position="462">
+              <caret line="117" column="51" selection-start-line="117" selection-start-column="51" selection-end-line="117" selection-end-column="51" />
               <folding />
             </state>
           </provider>
@@ -100,8 +90,8 @@
       <file leaf-file-name="agency.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/agency.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="16014">
-              <caret line="942" column="0" selection-start-line="942" selection-start-column="0" selection-end-line="943" selection-end-column="41" />
+            <state relative-caret-position="530">
+              <caret line="959" column="24" selection-start-line="953" selection-start-column="4" selection-end-line="963" selection-end-column="16" />
               <folding />
             </state>
           </provider>
@@ -112,6 +102,16 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="68">
               <caret line="4" column="106691" selection-start-line="4" selection-start-column="106691" selection-end-line="4" selection-end-column="106691" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="rsvp.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/css/rsvp.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="629">
+              <caret line="37" column="23" selection-start-line="37" selection-start-column="23" selection-end-line="37" selection-end-column="23" />
               <folding />
             </state>
           </provider>
@@ -149,9 +149,9 @@
         <option value="$PROJECT_DIR$/css/bootstrap.min.css" />
         <option value="$PROJECT_DIR$/CNAME" />
         <option value="$PROJECT_DIR$/js/picture-slider.js" />
-        <option value="$PROJECT_DIR$/css/rsvp.css" />
         <option value="$PROJECT_DIR$/css/agency.css" />
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/css/rsvp.css" />
         <option value="$PROJECT_DIR$/rsvp.html" />
       </list>
     </option>
@@ -324,12 +324,12 @@
       <workItem from="1465671649308" duration="1488000" />
       <workItem from="1467770803769" duration="11272000" />
       <workItem from="1471911222240" duration="2367000" />
-      <workItem from="1471925051673" duration="2368000" />
+      <workItem from="1471925051673" duration="2743000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17514000" />
+    <option name="totallyTimeSpent" value="17889000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1928" y="59" width="1936" height="1056" extended-state="6" />
@@ -700,22 +700,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/rsvp.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="9" selection-start-line="22" selection-start-column="9" selection-end-line="22" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/agency.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="16014">
-          <caret line="942" column="0" selection-start-line="942" selection-start-column="0" selection-end-line="943" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-7361">
@@ -727,10 +711,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/css/agency.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="530">
+          <caret line="959" column="24" selection-start-line="953" selection-start-column="4" selection-end-line="963" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/rsvp.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="629">
+          <caret line="37" column="23" selection-start-line="37" selection-start-column="23" selection-end-line="37" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/rsvp.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="428">
-          <caret line="115" column="55" selection-start-line="115" selection-start-column="55" selection-end-line="115" selection-end-column="55" />
+        <state relative-caret-position="462">
+          <caret line="117" column="51" selection-start-line="117" selection-start-column="51" selection-end-line="117" selection-end-column="51" />
           <folding />
         </state>
       </provider>

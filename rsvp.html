@@ -35,6 +35,7 @@
         </div>
     </div>
     <div id='firstNameWrapper' class="firstNameWrapper" width='100px'></div>
+    <div id='firstNameWrapper2' class="firstNameWrapper2"></div>
 
 
     <script src="https://www.gstatic.com/firebasejs/3.3.0/firebase.js"></script>
@@ -74,7 +75,7 @@
             submit.setAttribute("type", "button");
             submit.innerHTML = "SUBMIT";
             submit.className = "submitButton";
-            $(submit).appendTo($("#firstNameWrapper"));
+            $(submit).appendTo($("#firstNameWrapper2"));
 
             $(".submitButton").click(function (e) {
                 var guests = {};
@@ -104,7 +105,7 @@
             clear.setAttribute("type", "button");
             clear.innerHTML = "CLEAR";
             clear.className = "clearButton";
-            $(clear).appendTo($("#firstNameWrapper"));
+            $(clear).appendTo($("#firstNameWrapper2"));
 
             $(".clearButton").click(function (e) {
                 $(".nextButton").prop("disabled", false);
@@ -115,8 +116,8 @@
         function afterSubmit(numInvited) {
             $('#lastNameInput').prop('disabled', true);
             $('#numGuests').prop('disabled', true);
-            $('.clearButton').prop('disabled', true);
-            $('.submitButton').prop('disabled', true);
+            $('.firstNameWrapper2').empty();
+
             for(var i = 0; i < numInvited; i++) {
                 $(".firstName"+i).prop('disabled', true);
             }

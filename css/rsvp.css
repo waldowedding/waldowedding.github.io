@@ -22,3 +22,18 @@ body {
 .clearButton {
     float: right;
 }
+
+.returnButton {
+    background: rgb(248, 12, 58);
+    color: #999999;
+    border-color: #999999;
+    font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-transform: uppercase;
+    font-weight: 700;
+    border-radius: 15px;
+    font-size: 18px;
+    padding: 20px 40px;
+    opacity: .8;
+    float: left;
+    position: absolute;
+}
