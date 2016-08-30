@@ -65,62 +65,94 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             $(this).prop("disabled", true);
             var numInvited = Number($("#numGuests").val()) || 0;
             var lastName = $("#lastNameInput").val() || "undefined";
-            for (var i = 0; i < numInvited; i++) {
-                var firstNameDiv = document.createElement("div");
-                firstNameDiv.className = "firstNameDiv";
-                var className = "firstName" + i;
-                var firstNameForm = document.createElement("input");
-                firstNameForm.setAttribute("type", "text");
-                firstNameForm.setAttribute("id", "firstNames");
-                var next = i + 1;
-                var placeholder = "First Name " + next;
-                firstNameForm.setAttribute("placeholder", placeholder);
-                firstNameForm.className = className + " " + "form-control";
-                firstNameDiv.appendChild(firstNameForm);
-                $(firstNameDiv).appendTo($("#firstNameWrapper"));
-            }
+			if (numInvited === 0) {
+				var div1 = document.createElement("div");
+				div1.className = "regret";
+				div1.innerHTML = "We are sorry you can't make it! Please enter your first name below and any additional message for the couple!"
+				var firstNameDiv = document.createElement("div");
+				firstNameDiv.className = "firstNameDiv";
+				var className = "firstName" + '0';
+				var firstNameForm = document.createElement("input");
+				firstNameForm.setAttribute("type", "text");
+				firstNameForm.setAttribute("id", "firstNames");
+				firstNameForm.setAttribute("placeholder", "First name ");
+				firstNameForm.className = className + " " + "form-control";
+				var wishes = document.createElement("input");
+				wishes.setAttribute("type", "text");
+				wishes.setAttribute("id", "wishes");
+				wishes.setAttribute("placeholder", "Additional Message");
+				wishes.className = 'wishes' + " " + "form-control";
+				firstNameDiv.appendChild(div1);
+				firstNameDiv.appendChild(firstNameForm);
+				firstNameDiv.appendChild(wishes);
+				$(firstNameDiv).appendTo($("#firstNameWrapper"));
+			}
+			else {
+				for (var i = 0; i < numInvited; i++) {
+					var firstNameDiv = document.createElement("div");
+					firstNameDiv.className = "firstNameDiv";
+					var className = "firstName" + i;
+					var firstNameForm = document.createElement("input");
+					firstNameForm.setAttribute("type", "text");
+					firstNameForm.setAttribute("id", "firstNames");
+					var next = i + 1;
+					var placeholder = "First Name " + next;
+					firstNameForm.setAttribute("placeholder", placeholder);
+					firstNameForm.className = className + " " + "form-control";
+					firstNameDiv.appendChild(firstNameForm);
+					$(firstNameDiv).appendTo($("#firstNameWrapper"));
+				}
+				var wishes = document.createElement("input");
+				wishes.setAttribute("type", "text");
+				wishes.setAttribute("id", "wishes");
+				wishes.setAttribute("placeholder", "Additional Message");
+				wishes.className = 'wishes' + " " + "form-control";
+				$(wishes).appendTo($("#firstNameWrapper"));
+			}
+			var submit = document.createElement("button");
+			submit.setAttribute("type", "button");
+			submit.innerHTML = "SUBMIT";
+			submit.className = "submitButton";
+			$(submit).appendTo($("#firstNameWrapper2"));
 
-            var submit = document.createElement("button");
-            submit.setAttribute("type", "button");
-            submit.innerHTML = "SUBMIT";
-            submit.className = "submitButton";
-            $(submit).appendTo($("#firstNameWrapper2"));
+			$(".submitButton").click(function (e) {
+				var guests = {};
+				var lastName = $("#lastNameInput").val();
+				guests.lastName = lastName;
+				var number = numInvited;
+				guests.number = number;
 
-            $(".submitButton").click(function (e) {
-                var guests = {};
-                var lastName = $("#lastNameInput").val();
-                guests.lastName = lastName;
-                var number = numInvited;
-                guests.number = number;
+				for (var i = 0; i < numInvited; i++) {
+					var className = "firstName" + i.toString();
+					var firstName = $('.firstName' + i.toString()).val();
+					guests[className] = firstName;
+				}
+				var wishes = $('#wishes').val();
+				guests[wishes] = wishes;
 
-                for (var i = 0; i < numInvited; i++) {
-                    var className = "firstName" + i.toString();
-                    var firstName = $('.firstName' + i.toString()).val();
-                    guests[className] = firstName;
-                }
+				if (confirm("RSVP Submitted!\n Can't wait to see you October 29th!") == true) {
+					firebase.database().ref().push(guests);
+					afterSubmit(numInvited);
+				}
+				else {
+					window.alert("Cleared Form\n did not submit!");
+					$(".nextButton").prop("disabled", false);
+					$("#firstNameWrapper").empty();
+				}
+			});
 
-                if (confirm("RSVP Submitted!\n Can't wait to see you October 29th!") == true) {
-                    firebase.database().ref().push(guests);
-                    afterSubmit(numInvited);
-                }
-                else {
-                    window.alert("Cleared Form\n did not submit!");
-                    $(".nextButton").prop("disabled", false);
-                    $("#firstNameWrapper").empty();
-                }
-            });
+			var clear = document.createElement("button");
+			clear.setAttribute("type", "button");
+			clear.innerHTML = "CLEAR";
+			clear.className = "clearButton";
+			$(clear).appendTo($("#firstNameWrapper2"));
 
-            var clear = document.createElement("button");
-            clear.setAttribute("type", "button");
-            clear.innerHTML = "CLEAR";
-            clear.className = "clearButton";
-            $(clear).appendTo($("#firstNameWrapper2"));
-
-            $(".clearButton").click(function (e) {
-                $(".nextButton").prop("disabled", false);
-                $("#firstNameWrapper").empty();
-                $("#firstNameWrapper2").empty();
-            });
+			$(".clearButton").click(function (e) {
+				$(".nextButton").prop("disabled", false);
+				$("#firstNameWrapper").empty();
+				$("#firstNameWrapper2").empty();
+			});
+			
         });
 
         function afterSubmit(numInvited) {
