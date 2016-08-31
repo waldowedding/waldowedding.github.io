@@ -81,7 +81,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 				wishes.setAttribute("type", "text");
 				wishes.setAttribute("id", "wishes");
 				wishes.setAttribute("placeholder", "Additional Message");
-				wishes.className = 'wishes' + " " + "form-control";
+				wishes.className = "wishes form-control";
 				firstNameDiv.appendChild(div1);
 				firstNameDiv.appendChild(firstNameForm);
 				firstNameDiv.appendChild(wishes);
@@ -106,7 +106,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 				wishes.setAttribute("type", "text");
 				wishes.setAttribute("id", "wishes");
 				wishes.setAttribute("placeholder", "Additional Message");
-				wishes.className = 'wishes' + " " + "form-control";
+				wishes.className = "wishes form-control";
 				$(wishes).appendTo($("#firstNameWrapper"));
 			}
 			var submit = document.createElement("button");
@@ -128,7 +128,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 					guests[className] = firstName;
 				}
 				var wishes = $('#wishes').val();
-				guests[wishes] = wishes;
+				guests["wishes"] = wishes;
 
 				if (confirm("RSVP Submitted!\n Can't wait to see you October 29th!") == true) {
 					firebase.database().ref().push(guests);
