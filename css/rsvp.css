@@ -16,11 +16,12 @@ body {
 }
 
 .submitButton {
-
+    margin-top: 5px;
     margin-right: 5px;
 }
 .clearButton {
-    margin-left: 25px;
+    margin-top: 5px;
+    margin-left: 15px;
 }
 
 .returnButton {
