@@ -20,7 +20,7 @@ body {
     margin-right: 5px;
 }
 .clearButton {
-    float: right;
+    margin-left: 25px;
 }
 
 .returnButton {
